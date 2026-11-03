@@ -1,5 +1,5 @@
 import { ConnectKitButton } from 'connectkit'
-import { Wallet, Zap } from 'lucide-react'
+import { Wallet } from 'lucide-react'
 import { shortAddress } from '@/escrow/format'
 import { CHAIN_FACTS, IS_MAINNET } from '@/escrow/target'
 
@@ -8,9 +8,14 @@ export function Header({ onHome }: { onHome: () => void }) {
     <header className="sticky top-0 z-30 border-b border-white/10 bg-navy-950/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-4 py-3">
         <button onClick={onHome} className="flex min-h-11 items-center gap-2.5" aria-label="Zeus Escrow home">
-          <span className="flex size-9 items-center justify-center rounded-xl bg-gold text-navy-950">
-            <Zap className="size-5" strokeWidth={2.5} />
-          </span>
+          <img
+            src="/logo-64.png"
+            srcSet="/logo-64.png 1x, /logo-128.png 2x"
+            width={36}
+            height={36}
+            alt=""
+            className="size-9 shrink-0 rounded-xl"
+          />
           <span className="text-left leading-tight">
             <span className="display block text-lg font-bold">Zeus Escrow</span>
             <span className="flex items-center gap-1.5 text-[11px] font-medium text-white/60">
